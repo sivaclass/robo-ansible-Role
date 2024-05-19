@@ -1,0 +1,19 @@
+- name: nodejs
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: nodejs
+- name: app setup
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: app-setup
+- name: copy file 
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: copy    
+
+- name: system start & enable
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: system    
+
+
